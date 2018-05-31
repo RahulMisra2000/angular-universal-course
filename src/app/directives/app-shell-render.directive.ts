@@ -20,11 +20,9 @@ export class AppShellRenderDirective implements OnInit {
     ngOnInit() {
         if (isPlatformServer(this.platformId)) {
             this.viewContainer.createEmbeddedView(this.templateRef);
-        }
-        else {
+        } else {
             this.viewContainer.clear();
         }
 
     }
-
 }
