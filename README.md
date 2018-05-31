@@ -1,6 +1,6 @@
 
 ## Angular Universal Course
-
+.
 This repository contains the code of the [Angular Universal Course](https://angular-university.io/course/angular-universal-course).
 
 This course repository is updated to Angular v6, and there is a  package-lock.json file available, for avoiding semantic versioning installation issues.
