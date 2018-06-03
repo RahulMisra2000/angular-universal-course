@@ -40,9 +40,10 @@ $mat-custom-green: (
                 A700: $light-primary-text
         )
 );
+    
 
-
-// Define a theme.
+// Define a theme.asfsafsafddsaf
+$rahul: mat-palette($mat-custom-green);
 $primary: mat-palette($mat-custom-green);
 $accent:  mat-palette($mat-pink, A200, A100, A400);
 

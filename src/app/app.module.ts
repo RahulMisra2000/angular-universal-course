@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button'
 import {MatIconModule} from '@angular/material/icon';
@@ -11,7 +11,7 @@ import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './home/home.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
-import {CourseComponent} from "./course/course.component";
+import {CourseComponent} from './course/course.component';
 import {
     MatDatepickerModule,
     MatDialogModule,
@@ -19,18 +19,19 @@ import {
     MatSortModule,
     MatTableModule,
     MatToolbarModule
-} from "@angular/material";
-import {CoursesService} from "./services/courses.service";
-import {CourseResolver} from "./services/course.resolver";
+} from '@angular/material';
+import {CoursesService} from './services/courses.service';
+import {CourseResolver} from './services/course.resolver';
 import { CourseDialogComponent } from './course-dialog/course-dialog.component';
-import {ReactiveFormsModule} from "@angular/forms";
-import {MatMomentDateModule} from "@angular/material-moment-adapter";
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatMomentDateModule} from '@angular/material-moment-adapter';
 import { HttpClientModule} from '@angular/common/http';
 import {AppShellNoRenderDirective} from './directives/app-shell-no-render.directive';
 import {AppShellRenderDirective} from './directives/app-shell-render.directive';
+import {injT } from './toastr.service';
 
 
-
+declare let toastr: any ;
 
 
 @NgModule({
@@ -70,10 +71,14 @@ import {AppShellRenderDirective} from './directives/app-shell-render.directive';
     ],
     providers: [
         CoursesService,
-        CourseResolver
+        CourseResolver,
+        { provide: injT , useValue: toastr}
     ],
     bootstrap: [AppComponent],
     entryComponents: [CourseDialogComponent]
 })
 export class AppModule {
+
+
+
 }

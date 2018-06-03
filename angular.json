@@ -21,9 +21,13 @@
               "src/favicon.ico"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/toastr/build/toastr.css"
             ],
-            "scripts": []
+            "scripts": [              
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/toastr/toastr.js"
+            ]
           },
           "configurations": {
             "production": {
